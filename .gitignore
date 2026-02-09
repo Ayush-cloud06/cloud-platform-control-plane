@@ -1,0 +1,99 @@
+# =========================
+# Terraform
+# =========================
+
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Terraform variable files (often contain secrets)
+*.tfvars
+*.tfvars.json
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform plan output
+*.tfplan
+*.plan
+
+# Lock file (optional decision)
+# If you want reproducible provider versions, COMMENT THIS OUT
+.terraform.lock.hcl
+
+
+# =========================
+# Sensitive / Secrets
+# =========================
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Key files
+*.pem
+*.key
+*.p12
+*.pfx
+
+# AWS credentials
+credentials
+config
+
+
+# =========================
+# OS / System Files
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# =========================
+# IDE / Editor
+# =========================
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+*.iml
+
+# Sublime
+*.sublime-workspace
+*.sublime-project
+
+
+# =========================
+# Logs / Temp
+# =========================
+
+*.log
+logs/
+tmp/
+temp/
+
+
+# =========================
+# Python (if using scripts)
+# =========================
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+
+#

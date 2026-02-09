@@ -7,5 +7,15 @@ variable "aws_region" {
 variable "security_alert_email" {
   description = "Email for security notifications"
   type        = string
-  default     = "example@gmail.com"
+}
+
+variable "features" {
+  description = "Feature flags to enable/disable specific security modules"
+  type        = map(bool)
+  default = {
+    siem_integration = false
+    quotas           = false
+    break_glass      = false
+    cost_controls    = false
+  }
 }
