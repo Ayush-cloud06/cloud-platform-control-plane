@@ -1,11 +1,11 @@
-variable "security_alert_email" {
-  description = "Email address to receive security alerts"
+variable "aws_region" {
+  description = "AWS Region to deploy to"
   type        = string
+  default     = "ap-south-1"
 }
 
-
-variable "aws_region" {
-  description = "AWS region for the landing zone"
+variable "security_alert_email" {
+  description = "Email for security notifications"
   type        = string
-  default     = "ap-south-1" # Change as needed
+  default     = "example@gmail.com"
 }

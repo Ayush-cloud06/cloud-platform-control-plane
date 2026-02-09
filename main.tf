@@ -1,11 +1,7 @@
-# AWS Secure Landing Zone
-#
-# This root module initializes the security baseline of an AWS account.
-# It wires together:
-# - IAM foundation
-# - Permission boundaries
-# - CloudTrail logging
-# - S3 guardrails
-# - Security alerting (SNS)
-#
-# All security logic lives inside subdirectories.
+module "core" {
+  source = "./modules/core"
+
+  # pass variables down to the core module
+  aws_region           = var.aws_region
+  security_alert_email = var.security_alert_email
+}
