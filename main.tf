@@ -30,4 +30,7 @@ module "break_glass" {
 module "cost_controls" {
   source = "./modules/cost_controls"
   count  = var.features.cost_controls ? 1 : 0
+
+  notification_email   = var.security_alert_email
+  monthly_budget_limit = 20
 }

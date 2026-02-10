@@ -7,6 +7,7 @@ variable "aws_region" {
 variable "security_alert_email" {
   description = "Email for security notifications"
   type        = string
+  default     = "test-admin@example.com"
 }
 
 variable "features" {
@@ -16,6 +17,6 @@ variable "features" {
     siem_integration = false
     quotas           = true
     break_glass      = true
-    cost_controls    = false
+    cost_controls    = true
   }
 }
