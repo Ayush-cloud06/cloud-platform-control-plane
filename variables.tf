@@ -14,7 +14,7 @@ variable "features" {
   description = "Feature flags to enable/disable specific security modules"
   type        = map(bool)
   default = {
-    siem_integration = false
+    siem_integration = true
     quotas           = true
     break_glass      = true
     cost_controls    = true

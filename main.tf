@@ -11,6 +11,10 @@ module "core" {
 module "siem" {
   source = "./modules/siem"
   count  = var.features.siem_integration ? 1 : 0
+
+  # For now, let's point it to our CloudTrail bucket as a placeholder
+  # In a real enterprise, this would be a separate 'Security Account' bucket
+  target_bucket_arn = module.core.cloudtrail_bucket_arn
 }
 
 module "quotas" {
