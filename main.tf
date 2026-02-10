@@ -14,6 +14,8 @@ module "siem" {
 module "quotas" {
   source = "./modules/quotas"
   count  = var.features.quotas ? 1 : 0
+
+  vpc_quota = 10
 }
 
 module "break_glass" {

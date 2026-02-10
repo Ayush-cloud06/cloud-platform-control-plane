@@ -14,7 +14,7 @@ variable "features" {
   type        = map(bool)
   default = {
     siem_integration = false
-    quotas           = false
+    quotas           = true
     break_glass      = false
     cost_controls    = false
   }
