@@ -15,7 +15,7 @@ variable "features" {
   default = {
     siem_integration = false
     quotas           = true
-    break_glass      = false
+    break_glass      = true
     cost_controls    = false
   }
 }

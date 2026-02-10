@@ -1,3 +1,5 @@
+data "aws_caller_identity" "current" {}
+
 module "core" {
   source = "./modules/core"
 
@@ -21,6 +23,8 @@ module "quotas" {
 module "break_glass" {
   source = "./modules/break_glass"
   count  = var.features.break_glass ? 1 : 0
+
+  break_glass_trusted_arn = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"
 }
 
 module "cost_controls" {
