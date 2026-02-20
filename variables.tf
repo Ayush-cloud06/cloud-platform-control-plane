@@ -20,3 +20,9 @@ variable "features" {
     cost_controls    = true
   }
 }
+
+
+variable "environment" {
+  description = "Environment name (security, dev, prod)"
+  type        = string
+}
