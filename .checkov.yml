@@ -1,0 +1,9 @@
+# Checkov configuration. Accepted risks are skipped INLINE next to the
+# resource they apply to (#checkov:skip=<ID>:<justification>), so every
+# exception is reviewed in the same diff as the code it excuses.
+framework:
+  - terraform
+  - github_actions
+compact: true
+quiet: true
+download-external-modules: false

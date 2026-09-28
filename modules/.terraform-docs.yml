@@ -1,0 +1,12 @@
+formatter: markdown table
+output:
+  file: README.md
+  mode: inject
+sections:
+  show: [inputs, outputs, resources]
+settings:
+  anchor: false
+  hide-empty: true
+  html: true
+  lockfile: false
+  type: true
