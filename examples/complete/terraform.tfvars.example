@@ -1,0 +1,6 @@
+aws_region        = "eu-central-1"
+alert_emails      = ["secops@example.com"]
+github_repository = "example-org/workload-infra"
+
+# trusted_principal_arns             = ["arn:aws:iam::123456789012:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_Admin_0123456789abcdef"]
+# break_glass_trusted_principal_arns = ["arn:aws:iam::123456789012:user/break-glass-1"]

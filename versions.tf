@@ -1,27 +1,18 @@
-/*
-Refactor Note:
+# This repository is a reusable module: it deliberately declares no provider
+# block, so the caller controls region, credentials, assume_role and
+# default_tags (e.g. one instance per account in a multi-account setup).
+# Runnable entry points live in examples/. See docs/adr/0001-reusable-module-with-examples.md.
 
-This repository is designed to function as a reusable, provider-agnostic
-landing zone module.
-
-The previous standalone provider configuration (provider.tf) was removed
-intentionally to allow the parent/root module to inject the appropriate
-AWS provider configuration (e.g., via assume_role for multi-account setups).
-
-This enables:
-- Multi-account deployments (security, dev, prod, etc.)
-- Provider alias injection from consuming projects
-- Proper separation between platform module and environment orchestration
-
-This repository is no longer intended to be executed directly as a
-standalone Terraform root. It is consumed by a higher-level landing zone
-orchestrator.
-*/
 terraform {
+  required_version = ">= 1.5.0"
+
   required_providers {
+    # Used only through child modules; declared here so callers see and
+    # resolve a single provider version constraint.
+    # tflint-ignore: terraform_unused_required_providers
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.0"
+      version = ">= 6.0, < 7.0"
     }
   }
 }

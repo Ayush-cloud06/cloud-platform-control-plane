@@ -1,99 +1,39 @@
-# =========================
-# Terraform
-# =========================
-
-# Local .terraform directories
+# Terraform working directories and state (state can contain secrets)
 **/.terraform/*
-
-# Terraform state files
 *.tfstate
 *.tfstate.*
 crash.log
+crash.*.log
+*.tfplan
+*.plan
 
-# Terraform variable files (often contain secrets)
+# This repo is a reusable module; consumers own provider locking.
+.terraform.lock.hcl
+
+# Variable files may hold account-specific values; commit *.tfvars.example instead.
 *.tfvars
 *.tfvars.json
+!*.tfvars.example
 
-# Override files
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Terraform plan output
-*.tfplan
-*.plan
-
-# Lock file (optional decision)
-# If you want reproducible provider versions, COMMENT THIS OUT
-.terraform.lock.hcl
-
-
-# =========================
-# Sensitive / Secrets
-# =========================
-
-# Environment files
+# Secrets
 .env
 .env.*
-*.env
-
-# Key files
 *.pem
 *.key
 *.p12
 *.pfx
 
-# AWS credentials
-credentials
-config
+# Scanner output
+results.sarif
 
-
-# =========================
-# OS / System Files
-# =========================
-
+# OS / editors
 .DS_Store
 Thumbs.db
-desktop.ini
-
-
-# =========================
-# IDE / Editor
-# =========================
-
-# VS Code
 .vscode/
-
-# JetBrains
 .idea/
 *.iml
-
-# Sublime
-*.sublime-workspace
-*.sublime-project
-
-
-# =========================
-# Logs / Temp
-# =========================
-
-*.log
-logs/
-tmp/
-temp/
-
-
-# =========================
-# Python (if using scripts)
-# =========================
-
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
-venv/
-
-
-#

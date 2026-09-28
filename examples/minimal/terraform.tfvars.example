@@ -1,0 +1,2 @@
+aws_region   = "eu-central-1"
+alert_emails = ["secops@example.com"]
